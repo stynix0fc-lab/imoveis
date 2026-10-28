@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://public.readdy.ai/ai/img_res/sandbox/1c913ca07941e52081b86c8a3740b23c/cd20dc22-d4d3-428b-ae7b-7c024e679fc0_common-favicon.png" />
+    <link rel="apple-touch-icon" href="https://public.readdy.ai/ai/img_res/sandbox/1c913ca07941e52081b86c8a3740b23c/cd20dc22-d4d3-428b-ae7b-7c024e679fc0_common-favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mirante Imóveis | Corretor de Imóveis em São Paulo</title>
+    <meta name="description" content="Imóveis residenciais na zona oeste de São Paulo: apartamentos, casas e coberturas com curadoria, avaliação honesta e acompanhamento até a entrega das chaves." />
+    <meta name="keywords" content="corretor de imóveis São Paulo, apartamento à venda Pinheiros, casa Alto de Pinheiros, cobertura Vila Madalena, imóveis zona oeste" />
+    <meta name="author" content="Mirante Imóveis" />
+    <meta property="og:title" content="Mirante Imóveis | Corretor de Imóveis em São Paulo" />
+    <meta property="og:description" content="Apartamentos, casas e coberturas escolhidos um a um na zona oeste de São Paulo, com preço, condomínio e metragem abertos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        var cfg = {"company":"ab889fe2-b8f6-4b95-861b-6abaeffccd37","url":"https://nuvexaai.online/chat/ab889fe2-b8f6-4b95-861b-6abaeffccd37","color":"#3f3f46","side":"right","label":"Fale conosco","name":"Tiago Atendente","avatar":"https://public.readdy.ai/ai/img_res/d36ce9e0d7a1ca9af855aaa8e46e9d43.webp","teaser":"Vamos começar? Fale com a gente! 😄","showTeaser":true,"track":"https://hlcda2tfwqf6clv6vr86.helloreaddy.com/functions/v1/widget-track"};
+        if (!cfg.company || !cfg.url || document.getElementById('nuvexa-widget')) return;
+        var side = cfg.side === 'left' ? 'left' : 'right';
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+        function bold(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>'); }
+        var vid = '';
+        try {
+          vid = localStorage.getItem('nvx_vid') || '';
+          if (!vid) {
+            vid = 'v' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10);
+            localStorage.setItem('nvx_vid', vid);
+          }
+        } catch (e) { vid = 'v' + Date.now().toString(36) + Math.random().toString(36).slice(2, 10); }
+        function track(action) {
+          if (!cfg.track) return;
+          try {
+            fetch(cfg.track, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              keepalive: true,
+              body: JSON.stringify({
+                companyId: cfg.company,
+                event: action,
+                visitorId: vid,
+                pageUrl: String(location.href).slice(0, 500),
+                referrer: document.referrer ? String(document.referrer).slice(0, 500) : null,
+                source: 'widget'
+              })
+            });
+          } catch (e) {}
+        }
+        var style = document.createElement('style');
+        style.textContent =
+          '#nuvexa-widget{position:fixed;bottom:20px;z-index:2147483000;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}' +
+          '#nuvexa-widget *{box-sizing:border-box}' +
+          '#nuvexa-widget .nvx-launch{display:flex;align-items:center;gap:10px}' +
+          '#nuvexa-widget .nvx-launch.nvx-left{flex-direction:row-reverse}' +
+          '#nuvexa-teaser{position:relative;max-width:260px;background:#fff;color:#1f2937;border:1px solid rgba(17,24,39,.08);border-radius:14px;padding:12px 15px;font-size:14px;line-height:1.45;box-shadow:0 14px 34px rgba(17,24,39,.18);cursor:pointer;animation:nvx-pop .32s ease}' +
+          '#nuvexa-teaser strong{font-weight:700}' +
+          '#nuvexa-teaser .nvx-tail{position:absolute;top:50%;margin-top:-8px;width:0;height:0;border:8px solid transparent}' +
+          '#nuvexa-teaser.nvx-tail-right .nvx-tail{right:-15px;border-left-color:#fff;border-right-width:0}' +
+          '#nuvexa-teaser.nvx-tail-left .nvx-tail{left:-15px;border-right-color:#fff;border-left-width:0}' +
+          '#nuvexa-avatar{position:relative;width:58px;height:58px;flex:0 0 auto;border-radius:999px;border:0;background:transparent;padding:0;cursor:pointer;box-shadow:0 10px 26px rgba(17,24,39,.26)}' +
+          '#nuvexa-avatar img{width:100%;height:100%;border-radius:999px;object-fit:cover;display:block}' +
+          '#nuvexa-avatar .nvx-fallback{width:100%;height:100%;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:700}' +
+          '#nuvexa-dot{position:absolute;right:1px;bottom:1px;width:13px;height:13px;border-radius:999px;background:#22c55e;border:2px solid #fff}' +
+          '#nuvexa-panel{position:fixed;bottom:96px;' + side + ':20px;width:380px;height:min(600px,calc(100vh - 160px));display:flex;flex-direction:column;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.3);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .2s ease,transform .2s ease}' +
+          '#nuvexa-panel.open{opacity:1;transform:translateY(0);pointer-events:auto}' +
+          '#nuvexa-panel iframe{flex:1 1 auto;min-height:0;width:100%;height:auto;border:0;display:block;background:#fff}' +
+          '#nuvexa-foot{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:6px;padding:7px 10px;border-top:1px solid rgba(17,24,39,.08);background:#fff;font-size:11px;color:#6b7280}' +
+          '#nuvexa-foot a{color:#6b7280;text-decoration:underline;cursor:pointer}' +
+          '@keyframes nvx-pop{0%{opacity:0;transform:translateY(6px) scale(.96)}100%{opacity:1;transform:none}}' +
+          '@media (max-width:460px){#nuvexa-panel{left:12px;right:12px;width:auto;bottom:92px;height:calc(100vh - 130px);height:calc(100dvh - 130px)}#nuvexa-teaser{max-width:200px}}';
+        document.head.appendChild(style);
+        var root = document.createElement('div');
+        root.id = 'nuvexa-widget';
+        root.style[side] = '20px';
+        root.style[side === 'left' ? 'right' : 'left'] = 'auto';
+        var panel = document.createElement('div');
+        panel.id = 'nuvexa-panel';
+        var chatFrame = document.createElement('iframe');
+        chatFrame.setAttribute('title', cfg.name);
+        panel.appendChild(chatFrame);
+        var foot = document.createElement('div');
+        foot.id = 'nuvexa-foot';
+        var footText = document.createElement('span');
+        footText.textContent = 'Atendimento ' + (cfg.name || 'online');
+        var footLink = document.createElement('a');
+        footLink.href = cfg.url;
+        footLink.target = '_blank';
+        footLink.rel = 'noopener noreferrer';
+        footLink.textContent = 'abrir em nova aba';
+        foot.appendChild(footText);
+        foot.appendChild(footLink);
+        panel.appendChild(foot);
+        var launch = document.createElement('div');
+        launch.className = 'nvx-launch' + (side === 'left' ? ' nvx-left' : '');
+        var teaser = document.createElement('div');
+        teaser.id = 'nuvexa-teaser';
+        teaser.className = side === 'left' ? 'nvx-tail-left' : 'nvx-tail-right';
+        teaser.innerHTML = bold(cfg.teaser || '') + '<span class="nvx-tail"></span>';
+        var avatar = document.createElement('button');
+        avatar.id = 'nuvexa-avatar';
+        avatar.type = 'button';
+        if (cfg.avatar) {
+          var img = document.createElement('img');
+          img.src = cfg.avatar;
+          img.alt = cfg.name;
+          avatar.appendChild(img);
+        } else {
+          var fb = document.createElement('span');
+          fb.className = 'nvx-fallback';
+          fb.style.backgroundColor = cfg.color;
+          fb.textContent = (cfg.name || 'A').charAt(0).toUpperCase();
+          avatar.appendChild(fb);
+        }
+        var dot = document.createElement('span');
+        dot.id = 'nuvexa-dot';
+        avatar.appendChild(dot);
+        avatar.setAttribute('aria-label', cfg.label);
+        var isOpen = false;
+        function render() {
+          if (isOpen) {
+            if (!chatFrame.src) chatFrame.src = cfg.url;
+            panel.classList.add('open');
+            teaser.style.display = 'none';
+            avatar.setAttribute('aria-label', 'Fechar atendimento');
+          } else {
+            panel.classList.remove('open');
+            teaser.style.display = cfg.showTeaser && cfg.teaser ? '' : 'none';
+            avatar.setAttribute('aria-label', cfg.label);
+          }
+        }
+        function toggle() { isOpen = !isOpen; if (isOpen) track('chat_open'); render(); }
+        avatar.addEventListener('click', toggle);
+        teaser.addEventListener('click', toggle);
+        launch.appendChild(teaser);
+        launch.appendChild(avatar);
+        root.appendChild(panel);
+        root.appendChild(launch);
+        document.body.appendChild(root);
+        render();
+        track('visit');
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  --font-label: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+
+  /* background — white-first canvas, hairlines */
+  --background-50: 1 0 0;
+  --background-100: 0.976 0.013 130;
+  --background-200: 0.928 0.02 130;
+  --background-300: 0.885 0.025 135;
+  --background-400: 0.8 0.03 140;
+  --background-500: 0.7 0.03 145;
+  --background-600: 0.6 0.03 145;
+  --background-700: 0.5 0.03 150;
+  --background-800: 0.4 0.03 150;
+  --background-900: 0.31 0.03 150;
+  --background-950: 0.22 0.02 150;
+
+  /* primary — warm spring green #79BC68 */
+  --primary-50: 0.976 0.013 130;
+  --primary-100: 0.95 0.03 135;
+  --primary-200: 0.9 0.06 137;
+  --primary-300: 0.84 0.09 138;
+  --primary-400: 0.78 0.115 139;
+  --primary-500: 0.725 0.13 140;
+  --primary-600: 0.63 0.125 143;
+  --primary-700: 0.53 0.11 150;
+  --primary-800: 0.44 0.09 150;
+  --primary-900: 0.36 0.07 150;
+  --primary-950: 0.27 0.05 150;
+
+  /* accent — accessible deep green #347D49 */
+  --accent-50: 0.97 0.015 150;
+  --accent-100: 0.93 0.035 150;
+  --accent-200: 0.86 0.06 150;
+  --accent-300: 0.77 0.085 150;
+  --accent-400: 0.65 0.1 150;
+  --accent-500: 0.53 0.11 150;
+  --accent-600: 0.47 0.1 150;
+  --accent-700: 0.41 0.09 150;
+  --accent-800: 0.35 0.075 150;
+  --accent-900: 0.29 0.06 150;
+  --accent-950: 0.22 0.045 150;
+
+  /* secondary — quiet sage */
+  --secondary-50: 0.975 0.008 140;
+  --secondary-100: 0.945 0.014 140;
+  --secondary-200: 0.89 0.022 142;
+  --secondary-300: 0.82 0.03 144;
+  --secondary-400: 0.72 0.036 145;
+  --secondary-500: 0.62 0.04 145;
+  --secondary-600: 0.54 0.04 147;
+  --secondary-700: 0.46 0.036 148;
+  --secondary-800: 0.38 0.032 150;
+  --secondary-900: 0.31 0.028 150;
+  --secondary-950: 0.23 0.022 150;
+
+  /* foreground — ink #26352A, body #526256 */
+  --foreground-50: 0.98 0.005 140;
+  --foreground-100: 0.94 0.008 140;
+  --foreground-200: 0.87 0.012 145;
+  --foreground-300: 0.77 0.016 145;
+  --foreground-400: 0.67 0.02 148;
+  --foreground-500: 0.6 0.024 150;
+  --foreground-600: 0.54 0.027 150;
+  --foreground-700: 0.48 0.03 150;
+  --foreground-800: 0.4 0.03 150;
+  --foreground-900: 0.35 0.03 150;
+  --foreground-950: 0.31 0.03 150;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: oklch(var(--background-50));
+  color: oklch(var(--foreground-950));
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid oklch(var(--accent-500));
+  outline-offset: 3px;
+}
+
+/* motion polish */
+:root {
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+a,
+button {
+  transition-timing-function: var(--ease-out-soft);
+}
+
+main [id] {
+  scroll-margin-top: 96px;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-enter {
+  animation: page-fade-in 200ms var(--ease-out-soft);
+}
+
+/* editorial reveals (hidden state only when armed by JS) */
+.reveal-up {
+  transition: opacity 600ms var(--ease-out-soft), transform 600ms var(--ease-out-soft);
+  transition-delay: var(--rd, 0ms);
+}
+.reveal-up[data-state='armed'] {
+  opacity: 0;
+  transform: translateY(22px);
+}
+.reveal-wipe {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 750ms var(--ease-out-soft);
+  transition-delay: var(--rd, 0ms);
+}
+.reveal-wipe[data-state='armed'] {
+  clip-path: inset(0 100% 0 0);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+/* form auxiliary field */
+.fld-alt-wrap {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  .page-enter {
+    animation: none;
+  }
+}
